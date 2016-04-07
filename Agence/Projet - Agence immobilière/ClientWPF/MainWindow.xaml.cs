@@ -268,6 +268,7 @@ namespace ClientWPF
             String id = ((Button)sender).Tag.ToString();
             Gestion fenetre = new Gestion(id);
             fenetre.ShowDialog();
+            Window_Loaded(sender, e);
 
 
         }

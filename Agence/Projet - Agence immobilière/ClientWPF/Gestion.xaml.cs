@@ -21,6 +21,37 @@ namespace ClientWPF
     /// </summary>
     public partial class Gestion : Window, INotifyPropertyChanged
     {
+        string ID;
+        ServiceAgence.BienImmobilier bien = null;
+
+
+        string
+            DateMiseEnTransaction = null,
+            Description = null,
+            TypeBien = null,
+            DateTransaction = null,
+            EnergieChauffage = null,
+            TypeChauffage = null,
+            TypeTransaction = null,
+            TransactionEffectue = null,
+            Adresse = null,
+            codePostal = null,
+            Ville = null,
+            Titre = null,
+            Photo = null,
+            Bien = null;
+
+
+        double
+            MontantCharge = -1,
+            Prix = -1,
+            Surface = -1;
+
+        int
+            NbEtage = -1,
+            NbPiece = -1,
+            NumEtage = -1;
+
         private Dictionary<string, object> _propertyValues = new Dictionary<string, object>();
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -48,6 +79,7 @@ namespace ClientWPF
 
             return false;
         }
+        /*COMBO BOX*/
 
         public ServiceAgence.BienImmobilierBase.eTypeBien? Bienselect
         {
@@ -96,37 +128,141 @@ namespace ClientWPF
             }
             set { SetProperty(value); }
         }
+        /*TEXT BOX*/
+        public string Titre1
+        {
+            get
+            {
+                if (GetProperty() == null)
+                    return "Pas renseigné";
+                else
+                    return (string)GetProperty();
+            }
+            set { SetProperty(value); }
+        }
+        public string Prix1
+        {
+            get
+            {
+                if (GetProperty() == null)
+                    return "-1";
+                else
+                    return (string)GetProperty();
+            }
+            set { SetProperty(value); }
+        }
+        public string Ville1
+        {
+            get
+            {
+                if (GetProperty() == null)
+                    return "Pas renseigné";
+                else
+                    return (string)GetProperty();
+            }
+            set { SetProperty(value); }
+        }
+        public string Adresse1
+        {
+            get
+            {
+                if (GetProperty() == null)
+                    return "Pas renseigné";
+                else
+                    return (string)GetProperty();
+            }
+            set { SetProperty(value); }
+        }
+        public string CodePostal1
+        {
+            get
+            {
+                if (GetProperty() == null)
+                    return "-1";
+                else
+                    return (string)GetProperty();
+            }
+            set { SetProperty(value); }
+        }
+        public string Surface1
+        {
+            get
+            {
+                if (GetProperty() == null)
+                    return "-1";
+                else
+                    return (string)GetProperty();
+            }
+            set { SetProperty(value); }
+        }
+        public string Nbetage1
+        {
+            get
+            {
+                if (GetProperty() == null)
+                    return "-1";
+                else
+                    return (string)GetProperty();
+            }
+            set { SetProperty(value); }
+        }
+        public string NbPiece1
+        {
+            get
+            {
+                if (GetProperty() == null)
+                    return "-1";
+                else
+                    return (string)GetProperty();
+            }
+            set { SetProperty(value); }
+        }
+        public string NumEtage1
+        {
+            get
+            {
+                if (GetProperty() == null)
+                    return "-1";
+                else
+                    return (string)GetProperty();
+            }
+            set { SetProperty(value); }
+        }
+        public string Description1
+        {
+            get
+            {
+                if (GetProperty() == null)
+                    return "Pas renseigné";
+                else
+                    return (string)GetProperty();
+            }
+            set { SetProperty(value); }
+        }
+        public string Charges1
+        {
+            get
+            {
+                if (GetProperty() == null)
+                    return "-1";
+                else
+                    return (string)GetProperty();
+            }
+            set { SetProperty(value); }
+        }
+        public string Photo1
+        {
+            get
+            {
+                if (GetProperty() == null)
+                    return "Pas renseigné";
+                else
+                    return (string)GetProperty();
+            }
+            set { SetProperty(value); }
+        }
 
-        string ID;
-        ServiceAgence.BienImmobilier bien = null;
 
-
-        string
-            DateMiseEnTransaction = null,
-            Description = null,
-            TypeBien = null,
-            DateTransaction = null,
-            EnergieChauffage = null,
-            TypeChauffage = null,
-            TypeTransaction = null,
-            TransactionEffectue = null,
-            Adresse = null,
-            codePostal = null,
-            Ville = null,
-            Titre = null,
-            Photo = null,
-            Bien = null;
-
-
-        double
-            MontantCharge = -1,
-            Prix = -1,
-            Surface = -1;
-
-        int
-            NbEtage = -1,
-            NbPiece = -1,
-            NumEtage = -1;
 
         public Gestion()
         {
@@ -158,22 +294,22 @@ namespace ClientWPF
                 {
                     ServiceAgence.BienImmobilier bien = new ServiceAgence.BienImmobilier();
 
-                    if (!String.IsNullOrEmpty(Descanc.Text)) bien.Description = Descanc.Text; else bien.Description = null;
+                    bien.Description = Description1;
                     bien.DateMiseEnTransaction = null;
-                    if (!String.IsNullOrEmpty(Convert.ToString(TypeTransacold.SelectedValue))) bien.TypeTransaction = (ServiceAgence.BienImmobilierBase.eTypeTransaction)(Convert.ToInt16(TypeTransacold.SelectedValue));
-                    if (!String.IsNullOrEmpty(Convert.ToString(TypeBienanc.SelectedValue))) bien.TypeBien = (ServiceAgence.BienImmobilierBase.eTypeBien)(Convert.ToInt16(TypeBienanc.SelectedValue));
-                    if (!String.IsNullOrEmpty(Convert.ToString(TypeChaufold.SelectedValue))) bien.TypeChauffage = (ServiceAgence.BienImmobilierBase.eTypeChauffage)(Convert.ToInt16(TypeChaufold.SelectedValue));
-                    if (!String.IsNullOrEmpty(Convert.ToString(energiechauffold.SelectedValue))) bien.EnergieChauffage = (ServiceAgence.BienImmobilierBase.eEnergieChauffage)(Convert.ToInt16(energiechauffold.SelectedValue));
-                    if (!String.IsNullOrEmpty(Adresseanc.Text)) bien.Adresse = Adresseanc.Text; else bien.Adresse = null;
-                    if (!String.IsNullOrEmpty(CPanc.Text)) bien.CodePostal = CPanc.Text; else bien.CodePostal = null;
-                    if (!String.IsNullOrEmpty(Villeancienne.Text)) bien.Ville = Villeancienne.Text.ToUpper(); else bien.Ville = null;
-                    if (!String.IsNullOrEmpty(MCanc.Text)) bien.MontantCharges = Convert.ToDouble(MCanc.Text); else bien.MontantCharges = -1.0;
-                    if (!String.IsNullOrEmpty(Prixan.Text)) bien.Prix = Convert.ToDouble(Prixan.Text); else bien.Prix = -1.0;
-                    if (!String.IsNullOrEmpty(Surfanc.Text)) bien.Surface = Convert.ToDouble(Surfanc.Text); else bien.Surface = -1;
-                    if (!String.IsNullOrEmpty(NbEtaanc.Text)) bien.NbEtages = Convert.ToInt16(NbEtaanc.Text); else bien.NbEtages = -1;
-                    if (!String.IsNullOrEmpty(NbPieanc.Text)) bien.NbPieces = Convert.ToInt16(NbPieanc.Text); else bien.NbPieces = -1;
-                    if (!String.IsNullOrEmpty(NumEtaanc.Text)) bien.NumEtage = Convert.ToInt16(NumEtaanc.Text); else bien.NumEtage = -1;
-                    if (!String.IsNullOrEmpty(trtbien.Text)) bien.Titre = trtbien.Text; else bien.Titre = null;
+                    bien.TypeTransaction = (ServiceAgence.BienImmobilierBase.eTypeTransaction)(Convert.ToInt16(TransacSelect));
+                    bien.TypeBien = (ServiceAgence.BienImmobilierBase.eTypeBien)(Convert.ToInt16(Bienselect));
+                    bien.TypeChauffage = (ServiceAgence.BienImmobilierBase.eTypeChauffage)(Convert.ToInt16(ChaufSelect));
+                    bien.EnergieChauffage = (ServiceAgence.BienImmobilierBase.eEnergieChauffage)(Convert.ToInt16(EnergieSelect));
+                    bien.Adresse = Adresse1;
+                    bien.CodePostal = CodePostal1;
+                    bien.Ville = Ville1.ToUpper();
+                    bien.MontantCharges = Convert.ToDouble(Charges1);
+                    bien.Prix = Convert.ToDouble(Prix1);
+                    bien.Surface = Convert.ToDouble(Surface1);
+                    bien.NbEtages = Convert.ToInt16(NbPiece1);
+                    bien.NbPieces = Convert.ToInt16(NbPiece1);
+                    bien.NumEtage = Convert.ToInt16(NumEtage1);
+                    bien.Titre = Titre1;
 
 
                     client.AjouterBienImmobilier(bien);
@@ -186,30 +322,27 @@ namespace ClientWPF
         public void ModifBien(object sender, EventArgs e)
         {
 
-
-
-
-
-            using (ServiceAgence.AgenceClient client = new ServiceAgence.AgenceClient())
+           using (ServiceAgence.AgenceClient client = new ServiceAgence.AgenceClient())
             {
-                ServiceAgence.BienImmobilier bien = new ServiceAgence.BienImmobilier();
+                bien = client.LireDetailsBienImmobilier(ID).Bien;
 
-                if (!String.IsNullOrEmpty(Descanc.Text)) bien.Description = Descanc.Text; else bien.Description = null;
+
+                bien.Description = Description1;
                 bien.DateMiseEnTransaction = null;
-                if (!String.IsNullOrEmpty(Convert.ToString(TypeTransacold.SelectedValue))) bien.TypeTransaction = (ServiceAgence.BienImmobilierBase.eTypeTransaction)(Convert.ToInt16(TypeTransacold.SelectedValue));
-                if (!String.IsNullOrEmpty(Convert.ToString(TypeBienanc.SelectedValue))) bien.TypeBien = (ServiceAgence.BienImmobilierBase.eTypeBien)(Convert.ToInt16(TypeBienanc.SelectedValue));
-                if (!String.IsNullOrEmpty(Convert.ToString(TypeChaufold.SelectedValue))) bien.TypeChauffage = (ServiceAgence.BienImmobilierBase.eTypeChauffage)(Convert.ToInt16(TypeChaufold.SelectedValue));
-                if (!String.IsNullOrEmpty(Convert.ToString(energiechauffold.SelectedValue))) bien.EnergieChauffage = (ServiceAgence.BienImmobilierBase.eEnergieChauffage)(Convert.ToInt16(energiechauffold.SelectedValue));
-                if (!String.IsNullOrEmpty(Adresseanc.Text)) bien.Adresse = Adresseanc.Text; else bien.Adresse = null;
-                if (!String.IsNullOrEmpty(CPanc.Text)) bien.CodePostal = CPanc.Text; else bien.CodePostal = null;
-                if (!String.IsNullOrEmpty(Villeancienne.Text)) bien.Ville = Villeancienne.Text.ToUpper(); else bien.Ville = null;
-                if (!String.IsNullOrEmpty(MCanc.Text)) bien.MontantCharges = Convert.ToDouble(MCanc.Text); else bien.MontantCharges = -1.0;
-                if (!String.IsNullOrEmpty(Prixan.Text)) bien.Prix = Convert.ToDouble(Prixan); else bien.Prix = -1.0;
-                if (!String.IsNullOrEmpty(Surfanc.Text)) bien.Surface = Convert.ToDouble(Surfanc.Text); else bien.Surface = -1;
-                if (!String.IsNullOrEmpty(NbEtaanc.Text)) bien.NbEtages = Convert.ToInt16(NbEtaanc.Text); else bien.NbEtages = -1;
-                if (!String.IsNullOrEmpty(NbPieanc.Text)) bien.NbPieces = Convert.ToInt16(NbPieanc.Text); else bien.NbPieces = -1;
-                if (!String.IsNullOrEmpty(NumEtaanc.Text)) bien.NumEtage = Convert.ToInt16(NumEtaanc.Text); else bien.NumEtage = -1;
-                if (!String.IsNullOrEmpty(trtbien.Text)) bien.Titre = trtbien.Text; else bien.Titre = null;
+                bien.TypeTransaction = (ServiceAgence.BienImmobilierBase.eTypeTransaction)(Convert.ToInt16(TransacSelect));
+                bien.TypeBien = (ServiceAgence.BienImmobilierBase.eTypeBien)(Convert.ToInt16(Bienselect));
+                bien.TypeChauffage = (ServiceAgence.BienImmobilierBase.eTypeChauffage)(Convert.ToInt16(ChaufSelect));
+                bien.EnergieChauffage = (ServiceAgence.BienImmobilierBase.eEnergieChauffage)(Convert.ToInt16(EnergieSelect));
+                bien.Adresse = Adresse1;
+                bien.CodePostal = CodePostal1;
+                bien.Ville = Ville1.ToUpper();
+                bien.MontantCharges = Convert.ToDouble(Charges1); 
+                bien.Prix = Convert.ToDouble(Prix1); 
+                bien.Surface = Convert.ToDouble(Surface1);
+                bien.NbEtages = Convert.ToInt16(NbPiece1); 
+                bien.NbPieces = Convert.ToInt16(NbPiece1);
+                bien.NumEtage = Convert.ToInt16(NumEtage1); 
+                bien.Titre = Titre1; 
 
 
                 client.ModifierBienImmobilier(bien);
@@ -220,23 +353,18 @@ namespace ClientWPF
 
         public void Ajout_Texte()
         {
-            this.Descanc.Text = Description;
-            this.DateMiseEnTransacanc.Text = DateTransaction;
-            this.Adresseanc.Text = Adresse;
-            this.CPanc.Text = codePostal;
-            this.Villeancienne.Text = Ville;
-            this.MCanc.Text = MontantCharge.ToString();
-            this.Prixan.Text = Prix.ToString();
-            this.Surfanc.Text = Surface.ToString();
-            this.NbEtaanc.Text = NbEtage.ToString();
-            this.NbPieanc.Text = NbPiece.ToString();
-            this.NumEtaanc.Text = NumEtage.ToString();
-            this.trtbien.Text = Titre;
-            this.TypeChaufold.Text = this.TypeChauffage;
-            this.TypeTransacold.Text = this.TypeTransaction;
-            this.TypeBienanc.Text = this.TypeBien;
-            this.energiechauffold.Text = this.EnergieChauffage;
-
+            Description1 = Description;
+            Adresse1 = Adresse;
+            CodePostal1 = codePostal;
+            Ville1 = Ville;
+            Charges1 = MontantCharge.ToString();
+            Prix1 = Prix.ToString();
+            Surface1 = Surface.ToString();
+            Nbetage1 = NbEtage.ToString();
+            NbPiece1 = NbPiece.ToString();
+            NumEtage1 = NumEtage.ToString();
+            Titre1 = Titre;
+            
 
         }
 

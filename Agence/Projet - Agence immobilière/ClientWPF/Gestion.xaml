@@ -88,24 +88,22 @@
         <Label x:Name="label16" Content="Energie Chauffage" Grid.Column="0" Grid.Row="15" />
         <Label x:Name="label17" Content="Photo (en base 64)" Grid.Column="0" Grid.Row="16" />
 
-
-        <TextBox x:Name="trtbien"  Grid.Column="1" Grid.Row="0" />
-        <ComboBox x:Name="TypeTransacold" Grid.Column="1" Grid.Row="1" SelectedValue="{Binding TransacSelect}"  ItemsSource="{Binding Source={StaticResource TypeTransac }}" />
-        <ComboBox x:Name="TypeBienanc" Grid.Column="1" Grid.Row="2" SelectedValue="{Binding Bienselect}" ItemsSource="{Binding Source={StaticResource BienTypeProvider }}" />
-        <TextBox x:Name="Prixan"  Grid.Column="1" Grid.Row="3" />
-        <TextBox x:Name="DateMiseEnTransacanc"  Grid.Column="1" Grid.Row="4" />
-        <TextBox x:Name="Villeancienne"  Grid.Column="1" Grid.Row="5" />
-        <TextBox x:Name="Descanc"  Grid.Column="1" Grid.Row="6" />
-        <TextBox x:Name="Adresseanc"  Grid.Column="1" Grid.Row="7" />
-        <TextBox x:Name="CPanc"  Grid.Column="1" Grid.Row="8" />
-        <TextBox x:Name="Surfanc"  Grid.Column="1" Grid.Row="9" />
-        <TextBox x:Name="NbEtaanc"  Grid.Column="1" Grid.Row="10" />
-        <TextBox x:Name="NbPieanc"  Grid.Column="1" Grid.Row="11" />
-        <TextBox x:Name="NumEtaanc"  Grid.Column="1" Grid.Row="12" />
-        <TextBox x:Name="MCanc"  Grid.Column="1" Grid.Row="13" />
+        <TextBox x:Name="trtbien"  Text="{Binding Titre1}" Grid.Column="1" Grid.Row="0"  />
+        <ComboBox x:Name="TypeTransacold"  Grid.Column="1" Grid.Row="1" SelectedValue="{Binding TransacSelect}"  ItemsSource="{Binding Source={StaticResource TypeTransac }}" />
+        <ComboBox x:Name="TypeBienanc"  Grid.Column="1" Grid.Row="2" SelectedValue="{Binding Bienselect}" ItemsSource="{Binding Source={StaticResource BienTypeProvider }}" />
+        <TextBox x:Name="Prixan"  Text="{Binding Prix1}" Grid.Column="1" Grid.Row="3" />
+        <TextBox x:Name="Villeancienne" Text="{Binding Ville1}" Grid.Column="1" Grid.Row="5" />
+        <TextBox x:Name="Descanc" Text="{Binding Description1}" Grid.Column="1" Grid.Row="6" />
+        <TextBox x:Name="Adresseanc" Text="{Binding Adresse1}" Grid.Column="1" Grid.Row="7" />
+        <TextBox x:Name="CPanc" Text="{Binding CodePostal1}"  Grid.Column="1" Grid.Row="8" />
+        <TextBox x:Name="Surfanc" Text="{Binding Surface1}" Grid.Column="1" Grid.Row="9" />
+        <TextBox x:Name="NbEtaanc" Text="{Binding Nbetage1}"  Grid.Column="1" Grid.Row="10" />
+        <TextBox x:Name="NbPieanc" Text="{Binding NbPiece1}" Grid.Column="1" Grid.Row="11" />
+        <TextBox x:Name="NumEtaanc" Text="{Binding NumEtage1}"  Grid.Column="1" Grid.Row="12" />
+        <TextBox x:Name="MCanc" Text="{Binding Charges1}"  Grid.Column="1" Grid.Row="13" />
         <ComboBox x:Name="TypeChaufold" Grid.Column="1" Grid.Row="14" SelectedValue="{Binding ChaufSelect}" ItemsSource="{Binding Source={StaticResource TypeChauffage }}" />
         <ComboBox x:Name="energiechauffold" Grid.Column="1" Grid.Row="15" SelectedValue="{Binding EnergieSelect}"  ItemsSource="{Binding Source={StaticResource EnergieChauffage }}" />
-        <TextBox x:Name="photoencodé"  Grid.Column="1" Grid.Row="16" />
+        <TextBox x:Name="photoencodé" Text="{Binding Photo1}" Grid.Column="1" Grid.Row="16" />
         <Button x:Name="button" Content="VALIDER" Grid.Column="1" Grid.Row="17" Click="AjoutBien" ></Button>
 
     </Grid>

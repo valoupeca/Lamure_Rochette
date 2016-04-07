@@ -102,3 +102,18 @@ C:\Users\Rochette\Documents\Visual Studio 2013\Projects\Agence\Projet - Agence i
 C:\Users\Rochette\Documents\Visual Studio 2013\Projects\Agence\Projet - Agence immobilière\ServiceWCF\obj\Debug\ServiceWCF.csprojResolveAssemblyReference.cache
 C:\Users\Rochette\Documents\Visual Studio 2013\Projects\Agence\Projet - Agence immobilière\ServiceWCF\obj\Debug\ServiceWCF.dll
 C:\Users\Rochette\Documents\Visual Studio 2013\Projects\Agence\Projet - Agence immobilière\ServiceWCF\obj\Debug\ServiceWCF.pdb
+C:\Users\lamur\Documents\GitHub\Lamure_Rochette\Agence\Projet - Agence immobilière\ServiceWCF\bin\SQL\agence.db
+C:\Users\lamur\Documents\GitHub\Lamure_Rochette\Agence\Projet - Agence immobilière\ServiceWCF\bin\ServiceWCF.dll.config
+C:\Users\lamur\Documents\GitHub\Lamure_Rochette\Agence\Projet - Agence immobilière\ServiceWCF\bin\ServiceWCF.dll
+C:\Users\lamur\Documents\GitHub\Lamure_Rochette\Agence\Projet - Agence immobilière\ServiceWCF\bin\ServiceWCF.pdb
+C:\Users\lamur\Documents\GitHub\Lamure_Rochette\Agence\Projet - Agence immobilière\ServiceWCF\bin\EntityFramework.dll
+C:\Users\lamur\Documents\GitHub\Lamure_Rochette\Agence\Projet - Agence immobilière\ServiceWCF\bin\EntityFramework.SqlServer.dll
+C:\Users\lamur\Documents\GitHub\Lamure_Rochette\Agence\Projet - Agence immobilière\ServiceWCF\bin\System.Data.SQLite.dll
+C:\Users\lamur\Documents\GitHub\Lamure_Rochette\Agence\Projet - Agence immobilière\ServiceWCF\bin\System.Data.SQLite.EF6.dll
+C:\Users\lamur\Documents\GitHub\Lamure_Rochette\Agence\Projet - Agence immobilière\ServiceWCF\bin\System.Data.SQLite.Linq.dll
+C:\Users\lamur\Documents\GitHub\Lamure_Rochette\Agence\Projet - Agence immobilière\ServiceWCF\bin\EntityFramework.xml
+C:\Users\lamur\Documents\GitHub\Lamure_Rochette\Agence\Projet - Agence immobilière\ServiceWCF\bin\EntityFramework.SqlServer.xml
+C:\Users\lamur\Documents\GitHub\Lamure_Rochette\Agence\Projet - Agence immobilière\ServiceWCF\bin\System.Data.SQLite.xml
+C:\Users\lamur\Documents\GitHub\Lamure_Rochette\Agence\Projet - Agence immobilière\ServiceWCF\obj\Debug\ServiceWCF.csprojResolveAssemblyReference.cache
+C:\Users\lamur\Documents\GitHub\Lamure_Rochette\Agence\Projet - Agence immobilière\ServiceWCF\obj\Debug\ServiceWCF.dll
+C:\Users\lamur\Documents\GitHub\Lamure_Rochette\Agence\Projet - Agence immobilière\ServiceWCF\obj\Debug\ServiceWCF.pdb
