@@ -1,0 +1,519 @@
+﻿#rs {
+    position: absolute;
+    top: 5%;
+    left: 20%;
+}
+
+#ra {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+}
+
+.info {
+    padding: 4px 15px;
+    background: #4479BA;
+    color: #FFF;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border: solid 1px #20538D;
+}
+
+    .info:focus, .info:hover {
+        background: #356094;
+        border: solid 1px #2A4E77;
+        text-decoration: none;
+    }
+
+#photo {
+    display: flex;
+    text-align : center;
+    
+}
+
+.data {
+    align-self: flex-end;
+}
+
+#titreimg {
+    align-self: flex-end;
+    color: darkred;
+    font-family: 'Roboto', sans-serif;
+    padding-left: 5%;
+    text-align : center;
+}
+
+.titrebien {
+    color: #e52d27;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+#alldata {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+#partenaire
+{
+    display : flex;
+    margin-left : 20px;
+}
+
+.imgpart
+{
+    width : 30%;
+    height : 20%;
+}
+.imgpart1
+{
+    width : 30%;
+    height : 12%;
+}
+.all {
+    margin-left: 5%;
+    margin-bottom: 5%;
+    border-radius: 5px;
+    border: groove 2px darkred;
+    text-align: center;
+    box-shadow: 8px 8px 0px #aaa;
+}
+
+.admin {
+    color: gray;
+    border: darkred;
+    border-radius: 8px;
+}
+
+
+#detail {
+    float: left;
+    font-family: 'Roboto', sans-serif;
+    margin-right: 2%;
+}
+
+#imgstl {
+    padding-left: 6%;
+}
+
+#biendetail {
+    clear: both;
+    font-family: 'Roboto', sans-serif;
+}
+
+#descrp {
+    clear: both;
+}
+
+.textebien, .txtimg {
+    color: grey;
+    font-family: 'Roboto', sans-serif;
+}
+
+td {
+    text-align: center;
+}
+
+.modifier {
+    color: darkred;
+    font-family: 'Roboto', sans-serif;
+    font-size : 25px;
+}
+
+body {
+    background-color: #F2F2F2;
+    border-radius : 4px;
+   
+}
+
+#admintab {
+    text-decoration: initial;
+    color: darkred;
+}
+
+.pastrouv {
+    color: red;
+    font-family: 'Roboto', sans-serif;
+}
+
+#logo {
+    width: 60px;
+    height: 60px;
+    display: flex;
+}
+
+
+.converter
+{
+    color : black ;
+}
+
+.snapchat
+{
+    width:8%;
+}
+
+#contact{
+    display :flex;  
+    color : darkred;
+}
+.test
+{
+    color : darkred;
+}
+
+.accueilphoto
+{
+    margin-left :  5%;
+
+}
+
+.cadenas
+{
+    color : black;
+}
+/*Bouton*/
+.button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: darkred;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 24px;
+    padding: 20px;
+    width: 300px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    text-decoration: none;
+}
+
+    .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+
+        .button span:after {
+            content: '>>';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+    .button:hover span {
+        padding-right: 25px;
+    }
+
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+
+    .button:hover {
+        background-color: #610000;
+    }
+
+    .button:active {
+        background-color: #610000;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+    }
+
+/*recherche*/
+.recherche {
+    display: inline-block;
+    height: 38px;
+    margin-top: 2px;
+    margin-bottom: 15px;
+    font-weight: 500;
+    background: none;
+    border: 0;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+    .recherche:focus {
+        border-color: red;
+        outline: 0;
+    }
+
+#search #search-input, #search .hint {
+    padding-left: 43px;
+    padding-right: 43px;
+    border-radius: 23px;
+}
+
+#search {
+    position: relative;
+    font-size: 18px;
+    padding-top: 40px;
+    margin: -20px auto 0px;
+}
+
+/*NAVBAR*/
+
+#navbar {
+    position: static;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background: darkred;
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+    #navbar li {
+        position: relative;
+        float: left;
+        line-height: 60px;
+        background: inherit;
+        text-align: center;
+        transition: all .2s;
+    }
+
+        #navbar li a {
+            position: relative;
+            display: block;
+            padding: 0 20px;
+            line-height: inherit;
+            color: white;
+            text-decoration: none;
+        }
+
+        #navbar li:before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 50%;
+            margin-left: -30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            transform: rotate(45deg);
+            transition: all 0, background .2s;
+        }
+
+        #navbar li:hover:before {
+            margin-top: 1px;
+            border-radius: 50% 50% 0 50%;
+            transition: all .1s, background .2s, margin-top .2s cubic-bezier(.5,30,.2,0);
+        }
+
+        #navbar li:hover,
+        #navbar li:hover:before {
+            background: #610000;
+        }
+
+        #navbar li.active,
+        #navbar li.active:before {
+            background: #610000;
+        }
+
+form {
+    height: 100%;
+    border-radius : 4px;
+}
+
+
+/*FOOTER*/
+#footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: block;
+    background-color: darkred;
+    color: white;
+}
+
+
+#footer-section {
+    padding: 40px 0px 40px 0px;
+    background-color: darkred;
+}
+
+#footer-copy {
+    position: fixed;
+    bottom: 0;
+}
+
+#footer-section h3 {
+    color: darkred;
+    font-size: 26px;
+    font-weight: 400;
+    padding: 0;
+    margin: 0px 0px 15px 0px;
+    height: 20px;
+}
+
+#footer-section a {
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 300;
+    text-decoration: none;
+    display: block;
+}
+
+    #footer-section a:hover {
+        text-decoration: underline;
+    }
+
+
+
+#footer-contact {
+    color: white;
+    font-size: 12px;
+    font-weight: 300;
+    padding: 30px 0px 10px 0px;
+}
+
+    #footer-contact div {
+        display: inline;
+    }
+
+    #footer-contact a {
+        display: inline;
+        color: inherit;
+        font-size: inherit;
+        line-height: inherit;
+    }
+
+#footer-copyright {
+    color: #eeeeee;
+    font-size: 11px;
+    font-weight: 300;
+}
+
+.footer-divider {
+    margin: 0px 4px 0px 4px;
+}
+
+@media screen and (min-width:600px) and (max-width: 999px) {
+    #footer-section h3 {
+        font-size: 16px;
+        font-weight: 400;
+        margin: 0px 0px 15px 0px;
+    }
+
+    #footer-section a {
+        font-size: 13px;
+        font-weight: 300;
+        line-height: 22px;
+    }
+
+    .footer-group {
+        margin: 0px 20px 0px 0px;
+    }
+
+    .footer-social-media-link {
+        width: 16px;
+        height: 16px;
+        margin: 4px;
+    }
+
+
+    #footer-contact {
+        font-size: 13px;
+        font-weight: 300;
+    }
+
+        #footer-contact div {
+            /* So that the address and phone numbers are on separate lines */
+            display: block;
+        }
+
+
+        #footer-contact a {
+            display: inline;
+            color: inherit;
+            font-size: inherit;
+            line-height: inherit;
+        }
+
+        #footer-contact div:nth-last-child(2) {
+            /* So that there is no divider between the address and phone number lines */
+            display: none;
+        }
+}
+
+@media screen and (max-width: 599px) {
+    #footer-section {
+        padding: 25px 0px 25px 0px;
+    }
+
+        #footer-section h3 {
+            font-size: 20px;
+            font-weight: 400;
+            margin: 4px 0px 10px 0px;
+        }
+
+        #footer-section a {
+            font-size: 17px;
+            font-weight: 300;
+            line-height: 28px;
+        }
+
+    .footer-group {
+        width: 300px;
+        margin: 0px 20px 20px 0px;
+    }
+
+        .footer-group > * {
+            vertical-align: top;
+        }
+
+    .footer-group-logo {
+        margin: 0px 0px 20px 0px;
+    }
+
+
+    #footer-logo {
+        background-image: url(http://www.braksoftware.com/codepen/bruce/v1/bruce-logo-footer-medium.png);
+        width: 120px;
+        height: 27px;
+        margin: 0px 10px 20px 0px;
+    }
+
+    #footer-join-our-team {
+        display: inline-block;
+        margin: 0px 10px 10px 0px;
+    }
+
+    .footer-social-media-link {
+        margin: 8px 4px 0px 0px;
+    }
+
+    #footer-contact {
+        font-size: 14px;
+        line-height: 24px;
+        padding: 10px 0px 10px 0px;
+    }
+
+
+
+    .footer-contact-company-name {
+        font-weight: 400;
+    }
+
+    .footer-divider {
+        display: none;
+    }
+
+    #footer-contact a {
+        display: inline;
+        color: inherit;
+        font-size: inherit;
+        line-height: inherit;
+    }
+}

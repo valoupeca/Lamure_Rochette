@@ -1,0 +1,112 @@
+﻿<Window x:Class="ClientWPF.Gestion"        
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        xmlns:s="clr-namespace:ClientWPF.ServiceAgence"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ClientWPF"
+        mc:Ignorable="d"
+        Title="Ajout/Modification">
+    <Window.Resources>
+        <ObjectDataProvider x:Key="BienTypeProvider"
+                            MethodName="GetValues"
+                            ObjectType="{x:Type sys:Enum}">
+            <ObjectDataProvider.MethodParameters>
+                <x:Type TypeName="s:BienImmobilierBase+eTypeBien"/>
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+
+        <ObjectDataProvider x:Key="TypeTransac"
+                            MethodName="GetValues"
+                            ObjectType="{x:Type sys:Enum}">
+            <ObjectDataProvider.MethodParameters>
+                <x:Type TypeName="s:BienImmobilierBase+eTypeTransaction"/>
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+
+        <ObjectDataProvider x:Key="TypeChauffage"
+                            MethodName="GetValues"
+                            ObjectType="{x:Type sys:Enum}">
+            <ObjectDataProvider.MethodParameters>
+                <x:Type TypeName="s:BienImmobilierBase+eTypeChauffage"/>
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+
+        <ObjectDataProvider x:Key="EnergieChauffage"
+                            MethodName="GetValues"
+                            ObjectType="{x:Type sys:Enum}">
+            <ObjectDataProvider.MethodParameters>
+                <x:Type TypeName="s:BienImmobilierBase+eEnergieChauffage"/>
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+
+        <Label x:Name="label" Content="Titre" Grid.Column="0" Grid.Row="0" />
+        <Label x:Name="label2" Content="Type de Transaction" Grid.Column="0" Grid.Row="1" />
+        <Label x:Name="label3" Content="Type de Bien" Grid.Column="0" Grid.Row="2" />
+        <Label x:Name="label4" Content="Prix" Grid.Column="0" Grid.Row="3" />
+        <Label x:Name="label5" Content="Date de mise en vente" Grid.Column="0" Grid.Row="4" />
+        <Label x:Name="label6" Content="Ville" Grid.Column="0" Grid.Row="5" />
+        <Label x:Name="label7" Content="Description " Grid.Column="0" Grid.Row="6" />
+        <Label x:Name="label8" Content="Adresse " Grid.Column="0" Grid.Row="7" />
+        <Label x:Name="label9" Content="Code postal " Grid.Column="0" Grid.Row="8" />
+        <Label x:Name="label10" Content="Surface " Grid.Column="0" Grid.Row="9" />
+        <Label x:Name="label11" Content="Nombre d'étages " Grid.Column="0" Grid.Row="10" />
+        <Label x:Name="label12" Content="Nombre de pièces" Grid.Column="0" Grid.Row="11" />
+        <Label x:Name="label13" Content="Numéro d'étages " Grid.Column="0" Grid.Row="12" />
+        <Label x:Name="label14" Content="Montant charges " Grid.Column="0" Grid.Row="13" />
+        <Label x:Name="label15" Content="Type chauffage" Grid.Column="0" Grid.Row="14"/>
+        <Label x:Name="label16" Content="Energie Chauffage" Grid.Column="0" Grid.Row="15" />
+        <Label x:Name="label17" Content="Photo (en base 64)" Grid.Column="0" Grid.Row="16" />
+
+
+        <TextBox x:Name="trtbien"  Grid.Column="1" Grid.Row="0" />
+        <ComboBox x:Name="TypeTransacold" Grid.Column="1" Grid.Row="1" SelectedValue="{Binding TransacSelect}"  ItemsSource="{Binding Source={StaticResource TypeTransac }}" />
+        <ComboBox x:Name="TypeBienanc" Grid.Column="1" Grid.Row="2" SelectedValue="{Binding Bienselect}" ItemsSource="{Binding Source={StaticResource BienTypeProvider }}" />
+        <TextBox x:Name="Prixan"  Grid.Column="1" Grid.Row="3" />
+        <TextBox x:Name="DateMiseEnTransacanc"  Grid.Column="1" Grid.Row="4" />
+        <TextBox x:Name="Villeancienne"  Grid.Column="1" Grid.Row="5" />
+        <TextBox x:Name="Descanc"  Grid.Column="1" Grid.Row="6" />
+        <TextBox x:Name="Adresseanc"  Grid.Column="1" Grid.Row="7" />
+        <TextBox x:Name="CPanc"  Grid.Column="1" Grid.Row="8" />
+        <TextBox x:Name="Surfanc"  Grid.Column="1" Grid.Row="9" />
+        <TextBox x:Name="NbEtaanc"  Grid.Column="1" Grid.Row="10" />
+        <TextBox x:Name="NbPieanc"  Grid.Column="1" Grid.Row="11" />
+        <TextBox x:Name="NumEtaanc"  Grid.Column="1" Grid.Row="12" />
+        <TextBox x:Name="MCanc"  Grid.Column="1" Grid.Row="13" />
+        <ComboBox x:Name="TypeChaufold" Grid.Column="1" Grid.Row="14" SelectedValue="{Binding ChaufSelect}" ItemsSource="{Binding Source={StaticResource TypeChauffage }}" />
+        <ComboBox x:Name="energiechauffold" Grid.Column="1" Grid.Row="15" SelectedValue="{Binding EnergieSelect}"  ItemsSource="{Binding Source={StaticResource EnergieChauffage }}" />
+        <TextBox x:Name="photoencodé"  Grid.Column="1" Grid.Row="16" />
+        <Button x:Name="button" Content="VALIDER" Grid.Column="1" Grid.Row="17" Click="AjoutBien" ></Button>
+
+    </Grid>
+</Window>

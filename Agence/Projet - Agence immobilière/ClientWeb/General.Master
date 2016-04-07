@@ -1,0 +1,59 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="General.master.cs" Inherits="ClientWeb.General" %>
+
+<%@ Register TagPrefix="ajaxToolkit" Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Agence Immobilière HouseFinder</title>
+    <link href="Style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto:500' rel='stylesheet' type='text/css' />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+
+
+
+
+<body>
+    <ul id="navbar">
+        <li class="active"><a href="Default.aspx">
+            <img id="logo" src="./res/logo.png" alt="logo" /></a></li>
+        <li><a href="Recherche_simple.aspx">Recherche simple</a></li>
+        <li><a href="Recherche_Avancee.aspx">Recherche avancée</a></li>
+
+        <a href="Admin.aspx"><i class="fa fa-lock fa-2x"></i></a>
+
+
+    </ul>
+    <form id="form1" runat="server">
+        <div class="wrapper">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            <div class="push"></div>
+        </div>
+
+        <br />
+    </form>
+
+
+    <footer id="footer">
+
+        <span class="nw footer-contact-company-name">Lamure & Cie:Location et vente de biens</span>
+        <span class="footer-divider">|</span>
+        <span class="nw">71 rue Peter Fink</span>
+        <span class="footer-divider">|</span>
+        <span class="nw">01000 Bourg-en-Bresse</span>
+        <span class="footer-divider">|</span>
+
+    </footer>
+
+</body>
+</html>
+

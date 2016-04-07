@@ -1,0 +1,72 @@
+C:\Tmp\AgenceImmobiliere\ClientWPF\bin\Debug\ClientWPF.exe.config
+C:\Tmp\AgenceImmobiliere\ClientWPF\obj\Debug\ClientWPF.csprojResolveAssemblyReference.cache
+C:\Tmp\AgenceImmobiliere\ClientWPF\obj\Debug\MainWindow.g.cs
+C:\Tmp\AgenceImmobiliere\ClientWPF\obj\Debug\App.g.cs
+C:\Tmp\AgenceImmobiliere\ClientWPF\obj\Debug\ClientWPF_MarkupCompile.cache
+C:\Tmp\AgenceImmobiliere\ClientWPF\bin\Debug\ClientWPF.exe
+C:\Tmp\AgenceImmobiliere\ClientWPF\bin\Debug\ClientWPF.pdb
+C:\Tmp\AgenceImmobiliere\ClientWPF\obj\Debug\MainWindow.baml
+C:\Tmp\AgenceImmobiliere\ClientWPF\obj\Debug\ClientWPF.g.resources
+C:\Tmp\AgenceImmobiliere\ClientWPF\obj\Debug\ClientWPF.Properties.Resources.resources
+C:\Tmp\AgenceImmobiliere\ClientWPF\obj\Debug\ClientWPF.csproj.GenerateResource.Cache
+C:\Tmp\AgenceImmobiliere\ClientWPF\obj\Debug\ClientWPF.exe
+C:\Tmp\AgenceImmobiliere\ClientWPF\obj\Debug\ClientWPF.pdb
+\\iutbg-smbetu.univ-lyon1.fr\homes\Documents\sem4\point Ney\Projet - Agence immobilière\ClientWPF\bin\Debug\ClientWPF.exe.config
+\\iutbg-smbetu.univ-lyon1.fr\homes\Documents\sem4\point Ney\Projet - Agence immobilière\ClientWPF\bin\Debug\ClientWPF.exe
+\\iutbg-smbetu.univ-lyon1.fr\homes\Documents\sem4\point Ney\Projet - Agence immobilière\ClientWPF\bin\Debug\ClientWPF.pdb
+\\iutbg-smbetu.univ-lyon1.fr\homes\Documents\sem4\point Ney\Projet - Agence immobilière\ClientWPF\obj\Debug\ClientWPF.csprojResolveAssemblyReference.cache
+\\iutbg-smbetu.univ-lyon1.fr\homes\Documents\sem4\point Ney\Projet - Agence immobilière\ClientWPF\obj\Debug\MainWindow.baml
+\\iutbg-smbetu.univ-lyon1.fr\homes\Documents\sem4\point Ney\Projet - Agence immobilière\ClientWPF\obj\Debug\MainWindow.g.cs
+\\iutbg-smbetu.univ-lyon1.fr\homes\Documents\sem4\point Ney\Projet - Agence immobilière\ClientWPF\obj\Debug\App.g.cs
+\\iutbg-smbetu.univ-lyon1.fr\homes\Documents\sem4\point Ney\Projet - Agence immobilière\ClientWPF\obj\Debug\ClientWPF_MarkupCompile.cache
+\\iutbg-smbetu.univ-lyon1.fr\homes\Documents\sem4\point Ney\Projet - Agence immobilière\ClientWPF\obj\Debug\ClientWPF.g.resources
+\\iutbg-smbetu.univ-lyon1.fr\homes\Documents\sem4\point Ney\Projet - Agence immobilière\ClientWPF\obj\Debug\ClientWPF.Properties.Resources.resources
+\\iutbg-smbetu.univ-lyon1.fr\homes\Documents\sem4\point Ney\Projet - Agence immobilière\ClientWPF\obj\Debug\ClientWPF.csproj.GenerateResource.Cache
+\\iutbg-smbetu.univ-lyon1.fr\homes\Documents\sem4\point Ney\Projet - Agence immobilière\ClientWPF\obj\Debug\ClientWPF.exe
+\\iutbg-smbetu.univ-lyon1.fr\homes\Documents\sem4\point Ney\Projet - Agence immobilière\ClientWPF\obj\Debug\ClientWPF.pdb
+C:\Users\lamur\Documents\IUT\sem 4\Poit.ney\Projet1\Projet - Agence immobilière\ClientWPF\bin\Debug\ClientWPF.exe.config
+C:\Users\lamur\Documents\IUT\sem 4\Poit.ney\Projet1\Projet - Agence immobilière\ClientWPF\obj\Debug\ClientWPF.exe
+C:\Users\lamur\Documents\IUT\sem 4\Poit.ney\Projet1\Projet - Agence immobilière\ClientWPF\obj\Debug\ClientWPF.pdb
+C:\Users\lamur\Documents\IUT\sem 4\Poit.ney\Projet1\Projet - Agence immobilière\ClientWPF\bin\Debug\ClientWPF.exe
+C:\Users\lamur\Documents\IUT\sem 4\Poit.ney\Projet1\Projet - Agence immobilière\ClientWPF\bin\Debug\ClientWPF.pdb
+C:\Users\lamur\Documents\IUT\sem 4\Poit.ney\Projet1\Projet - Agence immobilière\ClientWPF\obj\Debug\ClientWPF.csprojResolveAssemblyReference.cache
+C:\Users\lamur\Documents\IUT\sem 4\Poit.ney\Projet1\Projet - Agence immobilière\ClientWPF\obj\Debug\MainWindow.baml
+C:\Users\lamur\Documents\IUT\sem 4\Poit.ney\Projet1\Projet - Agence immobilière\ClientWPF\obj\Debug\MainWindow.g.cs
+C:\Users\lamur\Documents\IUT\sem 4\Poit.ney\Projet1\Projet - Agence immobilière\ClientWPF\obj\Debug\App.g.cs
+C:\Users\lamur\Documents\IUT\sem 4\Poit.ney\Projet1\Projet - Agence immobilière\ClientWPF\obj\Debug\ClientWPF_MarkupCompile.cache
+C:\Users\lamur\Documents\IUT\sem 4\Poit.ney\Projet1\Projet - Agence immobilière\ClientWPF\obj\Debug\ClientWPF.g.resources
+C:\Users\lamur\Documents\IUT\sem 4\Poit.ney\Projet1\Projet - Agence immobilière\ClientWPF\obj\Debug\ClientWPF.Properties.Resources.resources
+C:\Users\lamur\Documents\IUT\sem 4\Poit.ney\Projet1\Projet - Agence immobilière\ClientWPF\obj\Debug\ClientWPF.csproj.GenerateResource.Cache
+C:\Users\lamur\Documents\IUT\sem 4\Poit.ney\Projet1\Projet - Agence immobilière\ClientWPF\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\lamur\Documents\IUT\sem 4\Poit.ney\Projet1\Projet - Agence immobilière\ClientWPF\obj\Debug\ClientWPF_MarkupCompile.lref
+C:\Users\lamur\Documents\IUT\sem 4\Poit.ney\Projet1\Projet - Agence immobilière\ClientWPF\obj\Debug\Recherche_Simple.g.cs
+C:\Users\lamur\Documents\IUT\sem 4\Poit.ney\Projet1\Projet - Agence immobilière\ClientWPF\obj\Debug\Recherche_Simple.baml
+C:\Users\lamur\Documents\IUT\sem 4\Poit.ney\Projet1\Projet - Agence immobilière\ClientWPF\obj\Debug\Recherche_Avancee.g.cs
+C:\Users\lamur\Documents\IUT\sem 4\Poit.ney\Projet1\Projet - Agence immobilière\ClientWPF\obj\Debug\Recherche_Avancee.baml
+C:\Users\lamur\Documents\IUT\sem 4\Poit.ney\Projet1\Projet - Agence immobilière\ClientWPF\obj\Debug\Ajout.g.cs
+C:\Users\lamur\Documents\IUT\sem 4\Poit.ney\Projet1\Projet - Agence immobilière\ClientWPF\obj\Debug\Ajout.baml
+C:\Users\lamur\Documents\IUT\sem 4\Poit.ney\Projet1\Projet - Agence immobilière\ClientWPF\obj\Debug\Modifier.g.cs
+C:\Users\Rochette\Documents\Visual Studio 2013\Projects\Agence\Projet - Agence immobilière\ClientWPF\bin\Debug\ClientWPF.exe.config
+C:\Users\Rochette\Documents\Visual Studio 2013\Projects\Agence\Projet - Agence immobilière\ClientWPF\obj\Debug\ClientWPF.exe
+C:\Users\Rochette\Documents\Visual Studio 2013\Projects\Agence\Projet - Agence immobilière\ClientWPF\obj\Debug\ClientWPF.pdb
+C:\Users\Rochette\Documents\Visual Studio 2013\Projects\Agence\Projet - Agence immobilière\ClientWPF\obj\Debug\ClientWPF.csprojResolveAssemblyReference.cache
+C:\Users\Rochette\Documents\Visual Studio 2013\Projects\Agence\Projet - Agence immobilière\ClientWPF\obj\Debug\Gestion.g.cs
+C:\Users\Rochette\Documents\Visual Studio 2013\Projects\Agence\Projet - Agence immobilière\ClientWPF\obj\Debug\MainWindow.g.cs
+C:\Users\Rochette\Documents\Visual Studio 2013\Projects\Agence\Projet - Agence immobilière\ClientWPF\obj\Debug\Recherche_Avancee.g.cs
+C:\Users\Rochette\Documents\Visual Studio 2013\Projects\Agence\Projet - Agence immobilière\ClientWPF\obj\Debug\Recherche_Simple.g.cs
+C:\Users\Rochette\Documents\Visual Studio 2013\Projects\Agence\Projet - Agence immobilière\ClientWPF\obj\Debug\App.g.cs
+C:\Users\Rochette\Documents\Visual Studio 2013\Projects\Agence\Projet - Agence immobilière\ClientWPF\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Rochette\Documents\Visual Studio 2013\Projects\Agence\Projet - Agence immobilière\ClientWPF\obj\Debug\ClientWPF_MarkupCompile.cache
+C:\Users\Rochette\Documents\Visual Studio 2013\Projects\Agence\Projet - Agence immobilière\ClientWPF\obj\Debug\ClientWPF_MarkupCompile.lref
+C:\Users\Rochette\Documents\Visual Studio 2013\Projects\Agence\Projet - Agence immobilière\ClientWPF\bin\Debug\ClientWPF.exe
+C:\Users\Rochette\Documents\Visual Studio 2013\Projects\Agence\Projet - Agence immobilière\ClientWPF\bin\Debug\ClientWPF.pdb
+C:\Users\Rochette\Documents\Visual Studio 2013\Projects\Agence\Projet - Agence immobilière\ClientWPF\obj\Debug\Gestion.baml
+C:\Users\Rochette\Documents\Visual Studio 2013\Projects\Agence\Projet - Agence immobilière\ClientWPF\obj\Debug\MainWindow.baml
+C:\Users\Rochette\Documents\Visual Studio 2013\Projects\Agence\Projet - Agence immobilière\ClientWPF\obj\Debug\Recherche_Avancee.baml
+C:\Users\Rochette\Documents\Visual Studio 2013\Projects\Agence\Projet - Agence immobilière\ClientWPF\obj\Debug\Recherche_Simple.baml
+C:\Users\Rochette\Documents\Visual Studio 2013\Projects\Agence\Projet - Agence immobilière\ClientWPF\obj\Debug\ClientWPF.g.resources
+C:\Users\Rochette\Documents\Visual Studio 2013\Projects\Agence\Projet - Agence immobilière\ClientWPF\obj\Debug\ClientWPF.Properties.Resources.resources
+C:\Users\Rochette\Documents\Visual Studio 2013\Projects\Agence\Projet - Agence immobilière\ClientWPF\obj\Debug\ClientWPF.csproj.GenerateResource.Cache
+C:\Users\lamur\Documents\GitHub\Lamure_Rochette\Agence\Projet - Agence immobilière\ClientWPF\bin\Debug\ClientWPF.exe.config
+C:\Users\lamur\Documents\GitHub\Lamure_Rochette\Agence\Projet - Agence immobilière\ClientWPF\obj\Debug\ClientWPF.exe
+C:\Users\lamur\Documents\GitHub\Lamure_Rochette\Agence\Projet - Agence immobilière\ClientWPF\obj\Debug\ClientWPF.pdb

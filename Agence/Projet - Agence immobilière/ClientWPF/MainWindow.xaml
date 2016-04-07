@@ -1,0 +1,122 @@
+﻿<Window x:Class="ClientWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        xmlns:local="clr-namespace:ClientWPF"
+        xmlns:c="clr-namespace:ClientWPF.Converters"       
+        Title="Gestion de biens immobiliers"
+        WindowStartupLocation="CenterScreen" 
+        Loaded="Window_Loaded">
+
+    <Window.Resources>
+        <c:Base64toImage x:Key="simpleConverter" />
+
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="1px" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Menu x:Name="menu" HorizontalAlignment="Left" Grid.Column="0" Grid.ColumnSpan="3">
+            
+            <MenuItem Header="_Recherche">
+                <MenuItem Header="_Recherche Simple" Click="Recherche_Click">
+                    <MenuItem.Icon>
+                        <Image Source="Images/search.png" Width="16" Height="16" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="_Recherche Avancée"  Click="Recherche2_Click">
+                    <MenuItem.Icon>
+                        <Image Source="Images/search.png" Width="16" Height="16" />
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+                
+                <MenuItem Header="_Ajouter" Click="Ajout_Click">
+                    <MenuItem.Icon>
+                        <Image Source="Images/plus.png" />
+                    </MenuItem.Icon>
+                
+            </MenuItem>
+        </Menu>
+        <ListBox x:Name="bien" Grid.Column="0" Grid.Row="1"  Grid.ColumnSpan="2" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Visible"   ItemsSource="{Binding ListeBien.List}" SelectedItem="{Binding Detail, Mode=TwoWay}" >
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                    <StackPanel Orientation="Vertical">
+                        <StackPanel Orientation="Horizontal" >
+                            <Image Width="100px"  Source="{Binding PhotoPrincipaleBase64,Converter={StaticResource simpleConverter}}" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" >
+                            <Label Content="Titre du bien : " FontWeight="Bold" ></Label>
+                            <Label Content="{Binding Titre}" />
+                        </StackPanel>
+                        <StackPanel  Orientation="Horizontal" >
+                            <Label Content="Prix : " FontWeight="Bold"></Label>
+                            <Label Content="{Binding Prix}" ></Label>
+                        </StackPanel>
+                        </StackPanel>
+                        
+                        <StackPanel  Orientation="Vertical" >
+                            <Button  Click="Supprimer" Tag="{Binding Id}">Supprimer le bien</Button>
+                        
+                            <Button  Click="Modifier" Tag="{Binding Id}">Modifier le bien</Button>
+                        </StackPanel>
+                   
+                    </StackPanel>
+
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <GridSplitter Grid.Column="2" Grid.RowSpan="5" Width="5" HorizontalAlignment="Stretch"/>
+
+        <Grid  Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="1" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <ListBox Grid.Row="1"
+                     HorizontalAlignment="Center"
+                     HorizontalContentAlignment="Center"
+                     ItemsSource="{Binding Bien.Bien.PhotosBase64}" 
+                     SelectedItem="{Binding Detail, Mode=TwoWay}"  >
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel/>
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Border 
+                        Width="50px"
+                        Height="50px"
+                        BorderBrush="Black" 
+                        BorderThickness="1" >
+                            <Image x:Name="PhotoDetail" Width="50px" Height="50px" Source="{Binding Converter={StaticResource simpleConverter}}" />
+                        </Border>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <StackPanel  Grid.Row="2">
+                <TextBlock Grid.Row="3"  Text="{Binding Bien.Bien.Prix}"/>
+                <TextBlock Grid.Row="4"  Text="{Binding Bien.Bien.Description}"/>
+                <TextBlock Grid.Row="5"  Text="{Binding Bien.Bien.Adresse}"/>
+                <TextBlock Grid.Row="6"  Text="{Binding Bien.Bien.CodePostal}"/>
+                <TextBlock Grid.Row="7"  Text="{Binding Bien.Bien.Ville}"/>
+            </StackPanel>
+
+        </Grid>
+
+    </Grid>
+
+</Window>
