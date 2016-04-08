@@ -7,7 +7,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ClientWPF"
         mc:Ignorable="d"
-        Title="Ajout/Modification">
+        Title="Ajout/Modification"
+        Loaded="Window_Loaded">
     <Window.Resources>
         <ObjectDataProvider x:Key="BienTypeProvider"
                             MethodName="GetValues"
@@ -48,8 +49,6 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*" />
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
@@ -67,44 +66,70 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
+        
+        <Label x:Name="label" Content="Titre"   Grid.Column="0" Grid.Row="0"/>
+        <TextBox x:Name="trtbien"  Text="{Binding RecupBien.Titre}"   Grid.Column="1" Grid.Row="0" />
+        
+        <Label x:Name="label2" Content="Type de Transaction"  Grid.Column="0" Grid.Row="1" />
+        <ComboBox x:Name="TypeTransacold"   SelectedValue="{Binding RecupBien.TypeTransaction}"   Grid.Column="1" Grid.Row="1" ItemsSource="{Binding Source={StaticResource TypeTransac }}" />
+       
+        <Label x:Name="label3" Content="Type de Bien"   Grid.Column="0" Grid.Row="2"/>
+        <ComboBox x:Name="TypeBienanc"   SelectedValue="{Binding RecupBien.TypeBien}"  Grid.Column="1" Grid.Row="2" ItemsSource="{Binding Source={StaticResource BienTypeProvider }}" />
+
+        <Label x:Name="label4" Content="Prix"  Grid.Column="0" Grid.Row="3" />
+        <TextBox x:Name="Prixan"  Text="{Binding RecupBien.Prix}"  Grid.Column="1" Grid.Row="3"  />
+
+        <Label x:Name="label6" Content="Ville"  Grid.Column="0" Grid.Row="4" />
+        <TextBox x:Name="Villeancienne" Text="{Binding RecupBien.Ville}"  Grid.Column="1" Grid.Row="4" />
+
+        <Label x:Name="label7" Content="Description "  Grid.Column="0" Grid.Row="5" />
+        <TextBox x:Name="Descanc" Text="{Binding RecupBien.Description}"  Grid.Column="1" Grid.Row="5"  />
+
+        <Label x:Name="label8" Content="Adresse "  Grid.Column="0" Grid.Row="6" />
+        <TextBox x:Name="Adresseanc" Text="{Binding RecupBien.Adresse}"  Grid.Column="1" Grid.Row="6" />
+
+        <Label x:Name="label9" Content="Photo"  Grid.Column="0" Grid.Row="7" />
+       
+        <Button Content="Ajouter Photo" Click="LoadPhoto_Click" Grid.Column="1" Grid.Row="7"/>
+        
+       
+
+        <Label x:Name="label99" Content="Code postal "  Grid.Column="2" Grid.Row="0" />
+        <TextBox x:Name="CPanc" Text="{Binding RecupBien.CodePostal}"  Grid.Column="3" Grid.Row="0" />
+        
+        <Label x:Name="label10" Content="Surface "  Grid.Column="2" Grid.Row="1"/>
+        <TextBox x:Name="Surfanc" Text="{Binding RecupBien.Surface}"   Grid.Column="3" Grid.Row="1"/>
+        
+        <Label x:Name="label11" Content="Nombre d'étages "  Grid.Column="2" Grid.Row="2" />
+        <TextBox x:Name="NbEtaanc" Text="{Binding RecupBien.NbEtages}"  Grid.Column="3" Grid.Row="2"  />
+        
+        <Label x:Name="label12" Content="Nombre de pièces"  Grid.Column="2" Grid.Row="3" />
+        <TextBox x:Name="NbPieanc" Text="{Binding RecupBien.NbPieces}"  Grid.Column="3" Grid.Row="3" />
+
+        <Label x:Name="label13" Content="Numéro d'étages "  Grid.Column="2" Grid.Row="4" />
+        <TextBox x:Name="NumEtaanc" Text="{Binding RecupBien.NumEtage}"  Grid.Column="4" Grid.Row="4" />
+        
+        <Label x:Name="label14" Content="Montant charges "   Grid.Column="2" Grid.Row="5" />
+        <TextBox x:Name="MCanc" Text="{Binding RecupBien.MontantCharges}"  Grid.Column="4" Grid.Row="5" />
+
+        <Label x:Name="label24" Content="Date mise en transaction "   Grid.Column="0" Grid.Row="8" />
+        <DatePicker SelectedDate="{Binding RecupBien.DateMiseEnTransaction, StringFormat=yyyy-MM-dd}" Grid.Column="1" Grid.Row="8" />
 
 
-        <Label x:Name="label" Content="Titre" Grid.Column="0" Grid.Row="0" />
-        <Label x:Name="label2" Content="Type de Transaction" Grid.Column="0" Grid.Row="1" />
-        <Label x:Name="label3" Content="Type de Bien" Grid.Column="0" Grid.Row="2" />
-        <Label x:Name="label4" Content="Prix" Grid.Column="0" Grid.Row="3" />
-        <Label x:Name="label5" Content="Date de mise en vente" Grid.Column="0" Grid.Row="4" />
-        <Label x:Name="label6" Content="Ville" Grid.Column="0" Grid.Row="5" />
-        <Label x:Name="label7" Content="Description " Grid.Column="0" Grid.Row="6" />
-        <Label x:Name="label8" Content="Adresse " Grid.Column="0" Grid.Row="7" />
-        <Label x:Name="label9" Content="Code postal " Grid.Column="0" Grid.Row="8" />
-        <Label x:Name="label10" Content="Surface " Grid.Column="0" Grid.Row="9" />
-        <Label x:Name="label11" Content="Nombre d'étages " Grid.Column="0" Grid.Row="10" />
-        <Label x:Name="label12" Content="Nombre de pièces" Grid.Column="0" Grid.Row="11" />
-        <Label x:Name="label13" Content="Numéro d'étages " Grid.Column="0" Grid.Row="12" />
-        <Label x:Name="label14" Content="Montant charges " Grid.Column="0" Grid.Row="13" />
-        <Label x:Name="label15" Content="Type chauffage" Grid.Column="0" Grid.Row="14"/>
-        <Label x:Name="label16" Content="Energie Chauffage" Grid.Column="0" Grid.Row="15" />
-        <Label x:Name="label17" Content="Photo (en base 64)" Grid.Column="0" Grid.Row="16" />
+        <Label x:Name="label15" Content="Type chauffage"  Grid.Column="2" Grid.Row="6" />
+        <ComboBox x:Name="TypeChaufold" SelectedValue="{Binding RecupBien.TypeChauffage}"  Grid.Column="3" Grid.Row="6" ItemsSource="{Binding Source={StaticResource TypeChauffage }}" />
 
-        <TextBox x:Name="trtbien"  Text="{Binding Titre1}" Grid.Column="1" Grid.Row="0"  />
-        <ComboBox x:Name="TypeTransacold"  Grid.Column="1" Grid.Row="1" SelectedValue="{Binding TransacSelect}"  ItemsSource="{Binding Source={StaticResource TypeTransac }}" />
-        <ComboBox x:Name="TypeBienanc"  Grid.Column="1" Grid.Row="2" SelectedValue="{Binding Bienselect}" ItemsSource="{Binding Source={StaticResource BienTypeProvider }}" />
-        <TextBox x:Name="Prixan"  Text="{Binding Prix1}" Grid.Column="1" Grid.Row="3" />
-        <TextBox x:Name="Villeancienne" Text="{Binding Ville1}" Grid.Column="1" Grid.Row="5" />
-        <TextBox x:Name="Descanc" Text="{Binding Description1}" Grid.Column="1" Grid.Row="6" />
-        <TextBox x:Name="Adresseanc" Text="{Binding Adresse1}" Grid.Column="1" Grid.Row="7" />
-        <TextBox x:Name="CPanc" Text="{Binding CodePostal1}"  Grid.Column="1" Grid.Row="8" />
-        <TextBox x:Name="Surfanc" Text="{Binding Surface1}" Grid.Column="1" Grid.Row="9" />
-        <TextBox x:Name="NbEtaanc" Text="{Binding Nbetage1}"  Grid.Column="1" Grid.Row="10" />
-        <TextBox x:Name="NbPieanc" Text="{Binding NbPiece1}" Grid.Column="1" Grid.Row="11" />
-        <TextBox x:Name="NumEtaanc" Text="{Binding NumEtage1}"  Grid.Column="1" Grid.Row="12" />
-        <TextBox x:Name="MCanc" Text="{Binding Charges1}"  Grid.Column="1" Grid.Row="13" />
-        <ComboBox x:Name="TypeChaufold" Grid.Column="1" Grid.Row="14" SelectedValue="{Binding ChaufSelect}" ItemsSource="{Binding Source={StaticResource TypeChauffage }}" />
-        <ComboBox x:Name="energiechauffold" Grid.Column="1" Grid.Row="15" SelectedValue="{Binding EnergieSelect}"  ItemsSource="{Binding Source={StaticResource EnergieChauffage }}" />
-        <TextBox x:Name="photoencodé" Text="{Binding Photo1}" Grid.Column="1" Grid.Row="16" />
-        <Button x:Name="button" Content="VALIDER" Grid.Column="1" Grid.Row="17" Click="AjoutBien" ></Button>
+        <Label x:Name="label16" Content="Energie Chauffage"  Grid.Column="2" Grid.Row="7" />
+        <ComboBox x:Name="energiechauffold"  SelectedValue="{Binding RecupBien.EnergieChauffage}"  Grid.Column="3" Grid.Row="7" ItemsSource="{Binding Source={StaticResource EnergieChauffage }}" />
+
+
+        <Button x:Name="button" Content="VALIDER"  Click="AjoutBien"  Grid.Column="3" Grid.Row="8" ></Button>
+                       
+        
+       
 
     </Grid>
 </Window>

@@ -40,8 +40,8 @@ namespace ClientWPF
         public String villes { get; set; }
         public ServiceAgence.BienImmobilierBase.eTypeTransaction transac { get; set; }
         public ServiceAgence.BienImmobilierBase.eTypeBien bien { get; set; }
-        public ServiceAgence.BienImmobilierBase.eEnergieChauffage chauff { get; set; }
-        public ServiceAgence.BienImmobilierBase.eTypeChauffage energ { get; set; }
+        public ServiceAgence.BienImmobilierBase.eEnergieChauffage energ { get; set; }
+        public ServiceAgence.BienImmobilierBase.eTypeChauffage chauff { get; set; }
 
 
         private Dictionary<string, object> _propertyValues = new Dictionary<string, object>();
@@ -131,11 +131,11 @@ namespace ClientWPF
             if (nombrepiecemax.Text != "") { nbpiecemax = Convert.ToInt16(this.nombrepiecemax.Text); } else { nbpiecemax = -1; }
             if (etagemin.Text != "") { nueta1 = Convert.ToInt16(this.etagemin.Text); } else { nueta1 = -1; }
             if (etagemax.Text != "") { nueta2 = Convert.ToInt16(this.etagemax.Text); } else { nueta2 = -1; }
-            if (ville.Text != "") { villes = ville.Text; } else { villes = null; }
+            if (ville.Text != "") { villes = ville.Text; } else { villes = ""; }
             if (Bienselect != null) { bien = (ServiceAgence.BienImmobilierBase.eTypeBien)this.Bienselect; }
             if (TransacSelect != null) { transac = (ServiceAgence.BienImmobilierBase.eTypeTransaction)this.TransacSelect; } 
-            if (EnergieSelect != null) { energ = (ServiceAgence.BienImmobilierBase.eTypeChauffage)this.EnergieSelect; } 
-            if (ChaufSelect != null) { chauff = (ServiceAgence.BienImmobilierBase.eEnergieChauffage)this.ChaufSelect; } 
+            if (EnergieSelect != null) { energ = (ServiceAgence.BienImmobilierBase.eEnergieChauffage)this.EnergieSelect; } 
+            if (ChaufSelect != null) { chauff = (ServiceAgence.BienImmobilierBase.eTypeChauffage)this.ChaufSelect; } 
                 this.Close();
 
         }

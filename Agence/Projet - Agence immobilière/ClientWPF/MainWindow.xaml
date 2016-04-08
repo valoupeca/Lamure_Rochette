@@ -4,7 +4,7 @@
         xmlns:sys="clr-namespace:System;assembly=mscorlib"
         xmlns:local="clr-namespace:ClientWPF"
         xmlns:c="clr-namespace:ClientWPF.Converters"       
-        Title="Gestion de biens immobiliers"
+        Title="Gestion de biens immobiliers Lamure Rochette"
         WindowStartupLocation="CenterScreen" 
         Loaded="Window_Loaded">
 
@@ -26,51 +26,42 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <Menu x:Name="menu" HorizontalAlignment="Left" Grid.Column="0" Grid.ColumnSpan="3">
-            
+
             <MenuItem Header="_Recherche">
-                <MenuItem Header="_Recherche Simple" Click="Recherche_Click">
-                    <MenuItem.Icon>
-                        <Image Source="Images/search.png" Width="16" Height="16" />
-                    </MenuItem.Icon>
-                </MenuItem>
+                <MenuItem Header="_Recherche Simple" Click="Recherche_Click"/>
                 <MenuItem Header="_Recherche Avancée"  Click="Recherche2_Click">
-                    <MenuItem.Icon>
-                        <Image Source="Images/search.png" Width="16" Height="16" />
-                    </MenuItem.Icon>
                 </MenuItem>
             </MenuItem>
-                
-                <MenuItem Header="_Ajouter" Click="Ajout_Click">
-                    <MenuItem.Icon>
-                        <Image Source="Images/plus.png" />
-                    </MenuItem.Icon>
-                
+
+            <MenuItem Header="_Ajouter" Click="Ajout_Click">
+
+            </MenuItem>
+            <MenuItem Header="_Raz" Click="Raz_Click">
+
             </MenuItem>
         </Menu>
         <ListBox x:Name="bien" Grid.Column="0" Grid.Row="1"  Grid.ColumnSpan="2" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Visible"   ItemsSource="{Binding ListeBien.List}" SelectedItem="{Binding Detail, Mode=TwoWay}" >
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel Orientation="Horizontal">
                     <StackPanel Orientation="Vertical">
-                        <StackPanel Orientation="Horizontal" >
-                            <Image Width="100px"  Source="{Binding PhotoPrincipaleBase64,Converter={StaticResource simpleConverter}}" />
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal" >
-                            <Label Content="Titre du bien : " FontWeight="Bold" ></Label>
-                            <Label Content="{Binding Titre}" />
-                        </StackPanel>
+                            <StackPanel Orientation="Horizontal" >
+                                <Image Width="100px"  Source="{Binding PhotoPrincipaleBase64,Converter={StaticResource simpleConverter}}" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" >
+                                <Label Content="Titre du bien : " FontWeight="Bold" ></Label>
+                                <Label Content="{Binding Titre}" />
+                            </StackPanel>
+                            <StackPanel  Orientation="Horizontal" >
+                                <Label Content="Prix : " FontWeight="Bold"></Label>
+                                <Label Content="{Binding Prix}" ></Label>
+                            </StackPanel>
+                        
+
                         <StackPanel  Orientation="Horizontal" >
-                            <Label Content="Prix : " FontWeight="Bold"></Label>
-                            <Label Content="{Binding Prix}" ></Label>
-                        </StackPanel>
-                        </StackPanel>
-                        
-                        <StackPanel  Orientation="Vertical" >
                             <Button  Click="Supprimer" Tag="{Binding Id}">Supprimer le bien</Button>
-                        
+
                             <Button  Click="Modifier" Tag="{Binding Id}">Modifier le bien</Button>
                         </StackPanel>
-                   
                     </StackPanel>
 
                 </DataTemplate>
@@ -79,17 +70,27 @@
         <GridSplitter Grid.Column="2" Grid.RowSpan="5" Width="5" HorizontalAlignment="Stretch"/>
 
         <Grid  Grid.Column="3" Grid.ColumnSpan="2" Grid.Row="1" >
+
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
                 <RowDefinition />
             </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
 
-            <ListBox Grid.Row="1"
+
+
+            <ListBox Grid.Row="0" Grid.Column="0" 
                      HorizontalAlignment="Center"
                      HorizontalContentAlignment="Center"
                      ItemsSource="{Binding Bien.Bien.PhotosBase64}" 
-                     SelectedItem="{Binding Detail, Mode=TwoWay}"  >
+                     SelectedItem="{Binding Photo, Mode=TwoWay}" >
+
+
                 <ListBox.ItemsPanel>
                     <ItemsPanelTemplate>
                         <WrapPanel/>
@@ -97,24 +98,90 @@
                 </ListBox.ItemsPanel>
                 <ListBox.ItemTemplate>
                     <DataTemplate>
-                        <Border 
+                        <StackPanel Orientation="Vertical">
+                            <StackPanel Orientation="Vertical">
+                                <Border 
                         Width="50px"
                         Height="50px"
-                        BorderBrush="Black" 
+                        BorderBrush="Purple" 
                         BorderThickness="1" >
-                            <Image x:Name="PhotoDetail" Width="50px" Height="50px" Source="{Binding Converter={StaticResource simpleConverter}}" />
-                        </Border>
+                                    <Image x:Name="PhotoDetail" Width="50px" Height="50px" Source="{Binding Converter={StaticResource simpleConverter}}" Stretch="Uniform"  />
+                                </Border>
+                            </StackPanel>
+                            
+                        </StackPanel>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
-            <StackPanel  Grid.Row="2">
-                <TextBlock Grid.Row="3"  Text="{Binding Bien.Bien.Prix}"/>
-                <TextBlock Grid.Row="4"  Text="{Binding Bien.Bien.Description}"/>
-                <TextBlock Grid.Row="5"  Text="{Binding Bien.Bien.Adresse}"/>
-                <TextBlock Grid.Row="6"  Text="{Binding Bien.Bien.CodePostal}"/>
-                <TextBlock Grid.Row="7"  Text="{Binding Bien.Bien.Ville}"/>
+            <StackPanel Grid.Column="1" Grid.Row="0">
+                <Image Source="{Binding Bien.Bien.PhotoPrincipaleBase64,  Converter={StaticResource simpleConverter}}"></Image>
             </StackPanel>
 
+            <ListBox  Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" Grid.RowSpan="3"
+                      
+                      ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Visible">
+                
+                        <StackPanel  Orientation="Vertical">
+                        <StackPanel Orientation="Horizontal" >
+                            <Label Content="Titre du bien : " FontWeight="Bold" ></Label>
+                            <Label Content="{Binding Bien.Bien.Titre}" />
+                        </StackPanel>
+                        <StackPanel  Orientation="Horizontal" >
+                            <Label Content="Type de Bien : " FontWeight="Bold"></Label>
+                            <Label Content="{Binding Bien.Bien.TypeBien}" ></Label>
+                        </StackPanel>
+                        <StackPanel  Orientation="Horizontal" >
+                            <Label Content="Type Chauffage : " FontWeight="Bold"></Label>
+                            <Label Content="{Binding Bien.Bien.TypeChauffage}" ></Label>
+                        </StackPanel>
+                        <StackPanel  Orientation="Horizontal" >
+                            <Label Content="Energie Chauffage : " FontWeight="Bold"></Label>
+                            <Label Content="{Binding Bien.Bien.EnergieChauffage}" ></Label>
+                        </StackPanel>
+                        <StackPanel  Orientation="Horizontal" >
+                            <Label Content="Type Transaction : " FontWeight="Bold"></Label>
+                            <Label Content="{Binding Bien.Bien.TypeTransaction}" ></Label>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" >
+                            <Label Content="Prix : " FontWeight="Bold" ></Label>
+                            <Label Content="{Binding Bien.Bien.Prix}" />
+                        </StackPanel>
+                        <StackPanel  Orientation="Horizontal" >
+                            <Label Content="Adresse : " FontWeight="Bold"></Label>
+                            <Label Content="{Binding Bien.Bien.Adresse}" ></Label>
+                        </StackPanel>
+                        <StackPanel  Orientation="Horizontal" >
+                            <Label Content="Code postal : " FontWeight="Bold"></Label>
+                            <Label Content="{Binding Bien.Bien.CodePostal}" ></Label>
+                        </StackPanel>
+                        <StackPanel  Orientation="Horizontal" >
+                            <Label Content="Ville : " FontWeight="Bold"></Label>
+                            <Label Content="{Binding Bien.Bien.Ville}" ></Label>
+                        </StackPanel>
+                        <StackPanel  Orientation="Horizontal" >
+                            <Label Content="Description : " FontWeight="Bold"></Label>
+                            <Label Content="{Binding Bien.Bien.Description}" ></Label>
+                        </StackPanel>
+                        <StackPanel  Orientation="Horizontal" >
+                            <Label Content="Surface : " FontWeight="Bold"></Label>
+                            <Label Content="{Binding Bien.Bien.Surface}" ></Label>
+                        </StackPanel>
+                        <StackPanel  Orientation="Horizontal" >
+                            <Label Content="Nombres d'étages : " FontWeight="Bold"></Label>
+                            <Label Content="{Binding Bien.Bien.NbEtages}" ></Label>
+                        </StackPanel>
+                        <StackPanel  Orientation="Horizontal" >
+                            <Label Content="Nombres Pièces : " FontWeight="Bold"></Label>
+                            <Label Content="{Binding Bien.Bien.NbPieces}" ></Label>
+                        </StackPanel>
+                        <StackPanel  Orientation="Horizontal" >
+                            <Label Content="Numéro d'étage : " FontWeight="Bold"></Label>
+                            <Label Content="{Binding Bien.Bien.NumEtage}" ></Label>
+                        </StackPanel>
+
+                    </StackPanel>
+                
+            </ListBox>
         </Grid>
 
     </Grid>

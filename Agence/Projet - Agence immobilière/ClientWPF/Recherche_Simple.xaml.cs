@@ -92,7 +92,7 @@ namespace ClientWPF
         {
             
             if (prixentre.Text != "") { prix = Convert.ToDouble(this.prixentre.Text); } else { prix = -1; }
-            if (villeentre.Text != "") { ville = this.villeentre.Text; rempli += 1; } else { ville = null; }
+            if (villeentre.Text != "") { ville = this.villeentre.Text.ToUpper();  } else { ville = ""; }
             if (Bienselect != null) { bien = (ServiceAgence.BienImmobilierBase.eTypeBien)this.Bienselect; }
             if (TransacSelect != null) { transac = (ServiceAgence.BienImmobilierBase.eTypeTransaction)this.TransacSelect;}
             this.Close();

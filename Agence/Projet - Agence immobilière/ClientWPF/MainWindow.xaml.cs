@@ -25,6 +25,7 @@ namespace ClientWPF
 
     {
 
+
         private Dictionary<string, object> _propertyValues = new Dictionary<string, object>();
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -55,7 +56,10 @@ namespace ClientWPF
 
         public ServiceAgence.ResultatBienImmobilier Bien
         {
-            get { return (ServiceAgence.ResultatBienImmobilier)GetProperty(); }
+            get
+            {
+                return (ServiceAgence.ResultatBienImmobilier)GetProperty();
+            }
             set
             {
                 SetProperty(value);
@@ -76,6 +80,7 @@ namespace ClientWPF
             }
         }
 
+
         public ServiceAgence.BienImmobilierBase Detail
         {
             get
@@ -94,6 +99,7 @@ namespace ClientWPF
                     Bien = client.LireDetailsBienImmobilier(id);
                     //Bien.Bien.Code
                 }
+
             }
 
         }
@@ -113,6 +119,7 @@ namespace ClientWPF
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+
 
             using (ServiceAgence.AgenceClient client = new ServiceAgence.AgenceClient())
             {
@@ -157,18 +164,26 @@ namespace ClientWPF
             Window_Loaded(sender, e);
 
         }
+        private void Raz_Click(object sender, RoutedEventArgs e)
+        {
+            Window_Loaded(sender, e);
+        }
 
         private void Recherche_Click(object sender, RoutedEventArgs e)
         {
             Recherche_Simple fenetre = new Recherche_Simple();
             fenetre.ShowDialog();
-            String ville = fenetre.ville.ToUpper();
-            Double prix = fenetre.prix;
+            String ville;
+            Double prix;
+            if (fenetre.ville != "") { ville = fenetre.ville.ToUpper(); } else { ville = null; }
+            if (fenetre.prix != -1) { prix = fenetre.prix; } else { prix = -1; }
             ServiceAgence.BienImmobilierBase.eTypeTransaction transac = fenetre.transac;
             ServiceAgence.BienImmobilierBase.eTypeBien bien = fenetre.bien;
 
+
             using (ServiceAgence.AgenceClient client = new ServiceAgence.AgenceClient())
             {
+
 
                 ServiceAgence.CriteresRechercheBiensImmobiliers criteres = new ServiceAgence.CriteresRechercheBiensImmobiliers();
                 criteres.DateMiseEnTransaction1 = null;
@@ -210,10 +225,10 @@ namespace ClientWPF
             Recherche_Avancee fenetre = new Recherche_Avancee();
             fenetre.ShowDialog();
             String ville = fenetre.villes.ToUpper();
-            ServiceAgence.BienImmobilierBase.eEnergieChauffage chauff = fenetre.chauff;
+            ServiceAgence.BienImmobilierBase.eEnergieChauffage chauff = fenetre.energ;
             ServiceAgence.BienImmobilierBase.eTypeTransaction transac = fenetre.transac;
             ServiceAgence.BienImmobilierBase.eTypeBien bien = fenetre.bien;
-            ServiceAgence.BienImmobilierBase.eTypeChauffage typechauff = fenetre.energ;
+            ServiceAgence.BienImmobilierBase.eTypeChauffage typechauff = fenetre.chauff;
             Double prixmin = fenetre.prxmin;
             Double prixmax = fenetre.prxmax;
             Double surfmin = fenetre.sufmin;
@@ -257,12 +272,10 @@ namespace ClientWPF
                     this.ListeBien = resultat.Liste;
                 }
 
-
-
             }
         }
 
-        
+
         private void Modifier(object sender, RoutedEventArgs e)
         {
             String id = ((Button)sender).Tag.ToString();
@@ -275,10 +288,13 @@ namespace ClientWPF
 
         private void Supprimer(object sender, RoutedEventArgs e)
         {
-            String id = ((Button)sender).Tag.ToString();
-            using (ServiceAgence.AgenceClient client = new ServiceAgence.AgenceClient())
+            if (MessageBox.Show("Etes vous sur de vouloir supprimer ce bien ?", "Suppression", MessageBoxButton.YesNo, MessageBoxImage.Question, MessageBoxResult.Yes) == MessageBoxResult.Yes)
             {
-                client.SupprimerBienImmobilier(id);
+                String id = ((Button)sender).Tag.ToString();
+                using (ServiceAgence.AgenceClient client = new ServiceAgence.AgenceClient())
+                {
+                    client.SupprimerBienImmobilier(id);
+                }
             }
 
             Window_Loaded(sender, e);
@@ -288,4 +304,5 @@ namespace ClientWPF
 
 
     }
+
 }
